@@ -86,7 +86,7 @@ function useStoreValue<T>(store: ReadonlyStore<T>): T {
   useEffect(() => {
     const stop = run(async signal => {
       for await (const value of watchStore(signal, store)) {
-        setState(value);
+        setValue(value);
       }
     });
 
