@@ -1,0 +1,44 @@
+{
+  "name": "abort-controller-x-reactive-store",
+  "version": "0.0.0",
+  "description": "Reactive store primitive and helpers",
+  "keywords": [
+    "abort",
+    "abortable",
+    "abort-controller",
+    "reactive",
+    "reactive-store",
+    "reactive-variable"
+  ],
+  "repository": "deeplay-io/abort-controller-x-reactive-store",
+  "sideEffects": false,
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "src",
+    "lib",
+    "es"
+  ],
+  "scripts": {
+    "clean": "rimraf lib es",
+    "test": "jest --passWithNoTests",
+    "build:lib": "tsc -P tsconfig.build.json",
+    "build:es": "tsc -P tsconfig.es.json",
+    "build": "npm run build:lib && npm run build:es",
+    "prepublishOnly": "npm test && npm run clean && npm run build"
+  },
+  "author": "Daniel Lytkin <aikoven@deeplay.io>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "jest": "^27.0.4",
+    "prettier": "^2.1.2",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "abort-controller-x": "^0.4.0"
+  }
+}
