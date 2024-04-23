@@ -1,6 +1,6 @@
 {
   "name": "abort-controller-x-reactive-store",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Reactive store primitive and helpers",
   "keywords": [
     "abort",
